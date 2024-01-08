@@ -3,13 +3,14 @@ package com.formation.restaurant.models;
 import jakarta.persistence.*;
 
 import org.hibernate.annotations.GenericGenerator;
+import org.springframework.hateoas.RepresentationModel;
 
 import java.util.HashSet;
 import java.util.Set;
 
 @Table(name = "restaurants")
 @Entity
-public class Restaurant {
+public class Restaurant extends RepresentationModel<Restaurant> {
 
     @Id
     @GeneratedValue(generator = "system-uuid")
