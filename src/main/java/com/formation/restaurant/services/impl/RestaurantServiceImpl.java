@@ -1,7 +1,6 @@
 package com.formation.restaurant.services.impl;
 
 import com.formation.restaurant.dao.RestaurantRepository;
-import com.formation.restaurant.exceptions.ResourceNotFoundException;
 import com.formation.restaurant.models.Restaurant;
 import com.formation.restaurant.services.RestaurantService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,14 +22,6 @@ public class RestaurantServiceImpl implements RestaurantService {
         restoRepository.findAll().forEach(liste::add);
         return liste;
     }
-
-    /*@Override
-    public Restaurant findById(Long id){
-        if (restoRepository.findById(id).isPresent()){
-            return restoRepository.findById(id).get();
-        }
-        return null;
-    }*/
 
     @Override
     public Restaurant findById(String id){
