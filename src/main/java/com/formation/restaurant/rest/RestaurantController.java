@@ -22,15 +22,6 @@ public class RestaurantController {
         return restoService.findAll();
     }
 
-    /*@GetMapping("/{id}")
-    public Restaurant findById(@PathVariable("id") Long identifiant) {
-        Restaurant reponse = restoService.findById(identifiant);
-        if (reponse == null){
-            throw new ResourceNotFoundException();
-        }
-        return reponse;
-    }*/
-
     @GetMapping("/{id}")
     public Restaurant findById(@PathVariable("id") String identifiant) {
         Restaurant reponse = restoService.findById(identifiant);
